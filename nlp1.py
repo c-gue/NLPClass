@@ -49,3 +49,35 @@ print(hindi)
 
 english = hindi.translate(to='en')
 print(english)
+
+from textblob import Word
+
+index = Word('index')
+cacti = Word('cacti')
+
+print(index.pluralize())
+print(cacti.singularize())
+
+animals = TextBlob('dog cat fish bird').words
+print(animals.pluralize())
+
+
+#Spellcheck and corrections
+word = Word("theyr")
+print(word.spellcheck())
+
+print(word.correct())
+
+word1 = Word('studies')
+word2 = Word('varieties')
+
+print(word1.stem())
+print(word2.stem())
+
+#print(word1.lemmatize())
+#print(word2.lemmatize())
+
+happy = Word('happy')
+
+print(happy.definition())
+#print(happy.synsets)
