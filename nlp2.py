@@ -18,7 +18,6 @@ cleanlist = [word for word in blob.words if word not in stops]
 
 print(cleanlist)
 
-blob = TextBlob(Path("RomeoAndJuliet.txt").read_text())
 
 #print(blob.word_counts["romeo"])
 
